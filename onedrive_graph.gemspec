@@ -1,14 +1,15 @@
-# coding: utf-8
-lib = File.expand_path('../lib', __FILE__)
+# frozen_string_literal: true
+
+lib = File.expand_path(__dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'onedrive_ruby/version'
+require 'lib/onedrive_graph/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'onedrive_ruby'
-  spec.version       = OnedriveRuby::VERSION
+  spec.name          = 'onedrive_graph'
+  spec.version       = OnedriveGraph::VERSION
   spec.authors       = ['Rony Varghese']
   spec.email         = ['ronyv250289@gmail.com']
-  spec.summary       = %q{Onedrive REST API wrapper for Ruby}
+  spec.summary       = 'Onedrive REST API wrapper for Ruby'
   spec.homepage      = 'https://github.com/ronyv89/onedrive'
   spec.license       = 'MIT'
 
@@ -22,7 +23,11 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'guard-rspec'
   spec.add_development_dependency 'rake', '~> 10.0'
   spec.add_development_dependency 'rspec'
+  spec.add_development_dependency 'rubocop-rspec'
   spec.add_development_dependency 'simplecov'
+  spec.add_development_dependency 'webmock'
+  spec.add_development_dependency 'yard'
+  spec.add_development_dependency 'yardstick'
   spec.add_dependency 'httparty'
   spec.add_dependency 'oauth2'
 end

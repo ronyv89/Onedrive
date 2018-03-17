@@ -1,0 +1,7 @@
+require: rubocop-rspec
+Metrics/LineLength:
+  Max: 80
+  IgnoredPatterns:
+    - '(^\s*)#'
+Metrics/BlockLength:
+  ExcludedMethods: ['RSpec.describe', 'describe', 'context']
