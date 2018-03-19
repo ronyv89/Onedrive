@@ -28,6 +28,8 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'webmock'
   spec.add_development_dependency 'yard'
   spec.add_development_dependency 'yardstick'
+  spec.add_dependency 'hashie'
+  spec.add_dependency 'httmultiparty'
   spec.add_dependency 'httparty'
   spec.add_dependency 'oauth2'
 end
